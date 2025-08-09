@@ -712,6 +712,64 @@ interface BreadcrumbsProps extends BaseComponentProps, VariantProps<typeof bread
 }
 declare const Breadcrumbs: react.ForwardRefExoticComponent<BreadcrumbsProps & react.RefAttributes<HTMLElement>>;
 
+interface CommandPaletteOption {
+    id: string | number;
+    name: string;
+    description?: string;
+    icon?: React.ReactNode;
+    badge?: string;
+    url?: string;
+    group?: string;
+    disabled?: boolean;
+    onSelect?: () => void;
+}
+interface CommandPaletteGroup {
+    id: string;
+    name: string;
+    options: CommandPaletteOption[];
+}
+declare const commandPaletteContainerVariants: (props?: ({
+    variant?: "default" | "dark" | "semi-transparent" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+declare const commandPaletteInputVariants: (props?: ({
+    variant?: "default" | "dark" | "semi-transparent" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+declare const commandPaletteOptionVariants: (props?: ({
+    variant?: "default" | "dark" | "semi-transparent" | null | undefined;
+    disabled?: boolean | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+declare const commandPaletteGroupHeaderVariants: (props?: ({
+    variant?: "default" | "dark" | "semi-transparent" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+declare const commandPaletteDescriptionVariants: (props?: ({
+    variant?: "default" | "dark" | "semi-transparent" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+declare const commandPaletteBadgeVariants: (props?: ({
+    variant?: "default" | "dark" | "semi-transparent" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+declare const commandPaletteEmptyStateVariants: (props?: ({
+    variant?: "default" | "dark" | "semi-transparent" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+declare const commandPaletteEmptyIconVariants: (props?: ({
+    variant?: "default" | "dark" | "semi-transparent" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+declare const commandPaletteFooterVariants: (props?: ({
+    variant?: "default" | "dark" | "semi-transparent" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+interface CommandPaletteProps extends Omit<BaseComponentProps, 'children'>, VariantProps<typeof commandPaletteContainerVariants> {
+    open: boolean;
+    onClose: () => void;
+    options?: CommandPaletteOption[];
+    groups?: CommandPaletteGroup[];
+    placeholder?: string;
+    emptyMessage?: string;
+    showGroups?: boolean;
+    showIcons?: boolean;
+    footer?: React.ReactNode;
+    onOptionSelect?: (option: CommandPaletteOption) => void;
+}
+declare const CommandPalette: react.ForwardRefExoticComponent<CommandPaletteProps & react.RefAttributes<HTMLDivElement>>;
+
 declare const paginationVariants: (props?: ({
     variant?: "simple" | "card" | "numbered" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
@@ -1151,4 +1209,4 @@ declare const EmptyState: react.ForwardRefExoticComponent<EmptyStateProps & reac
 
 declare function cn(...inputs: ClassValue[]): string;
 
-export { ActionPanel, type ActionPanelAction, type ActionWithVariant, Alert, type Alignment, type Attachment, Avatar, AvatarGroup, type AvatarNotificationColor, type AvatarNotificationPosition, type AvatarProps$1 as AvatarProps, type AvatarShape, type AvatarSize, Badge, type BadgeColor, BadgeOnDark, type BadgeProps$1 as BadgeProps, type BadgeSize, type BadgeVariant, type BaseAction, type BaseColor, type BaseComponentProps, type BrandColor, type BreadcrumbItem, Breadcrumbs, Button, ButtonGroup, ButtonOnDark, type ButtonProps$1 as ButtonProps, type ButtonRounded, type ButtonSize, type ButtonVariant, Calendar, type CalendarDay, type CalendarEvent, type CalendarProps, Card, CardBody, CardFooter, CardHeader, CardHeading, type CardHeadingAction, type CardHeadingDropdownItem, type CardHeadingMeta, type CardHeadingProps, Checkbox, CircularButton, type ColorVariant, ComboboxComponent as Combobox, type ComboboxOption, Container, DescriptionList, type DescriptionListItem, Divider, Drawer, type DrawerAction, Dropdown, type DropdownItem, EmptyState, type EmptyStateAction, Feed, type FeedItem, type FormField, type FormFieldProps, FormLayout, type FormSection, GridList, type GridListItem, Input, type InputProps, type LayoutVariant, ListContainer, type ListItemWithAvatar, MediaObject, type MetaItem, Modal, type ModalAction, NativeSelect, Navbar, type NavbarItem, type NavbarProps, type NavigationItem, Notification, type NotificationAction, type NotificationPosition, PageHeading, type PageHeadingAction, type PageHeadingBreadcrumb, type PageHeadingMeta, type PageHeadingProps, Pagination, type Position, ProgressBar, type ProgressStep, RadioGroup, type RadioOption, SectionHeading, type SectionHeadingAction, type SectionHeadingProps, type SectionHeadingTab, Select, type SelectOption, type SelectableOption, SidebarNavigation, type SidebarNavigationItem, type SidebarNavigationSection, SignInForm, type SimpleSize, type Size, StackedList, type StackedListItem, type StatItem, Stats, type Status, type StatusColor, type StepItem, type TabItem, Table, type TableAction, type TableColumn$1 as TableColumn, Tabs, type TaskStatus, TextInput, Textarea, Toggle, VerticalNavigation, type VerticalNavigationGroup, type VerticalNavigationItem, cn };
+export { ActionPanel, type ActionPanelAction, type ActionWithVariant, Alert, type Alignment, type Attachment, Avatar, AvatarGroup, type AvatarNotificationColor, type AvatarNotificationPosition, type AvatarProps$1 as AvatarProps, type AvatarShape, type AvatarSize, Badge, type BadgeColor, BadgeOnDark, type BadgeProps$1 as BadgeProps, type BadgeSize, type BadgeVariant, type BaseAction, type BaseColor, type BaseComponentProps, type BrandColor, type BreadcrumbItem, Breadcrumbs, Button, ButtonGroup, ButtonOnDark, type ButtonProps$1 as ButtonProps, type ButtonRounded, type ButtonSize, type ButtonVariant, Calendar, type CalendarDay, type CalendarEvent, type CalendarProps, Card, CardBody, CardFooter, CardHeader, CardHeading, type CardHeadingAction, type CardHeadingDropdownItem, type CardHeadingMeta, type CardHeadingProps, Checkbox, CircularButton, type ColorVariant, ComboboxComponent as Combobox, type ComboboxOption, CommandPalette, type CommandPaletteGroup, type CommandPaletteOption, type CommandPaletteProps, Container, DescriptionList, type DescriptionListItem, Divider, Drawer, type DrawerAction, Dropdown, type DropdownItem, EmptyState, type EmptyStateAction, Feed, type FeedItem, type FormField, type FormFieldProps, FormLayout, type FormSection, GridList, type GridListItem, Input, type InputProps, type LayoutVariant, ListContainer, type ListItemWithAvatar, MediaObject, type MetaItem, Modal, type ModalAction, NativeSelect, Navbar, type NavbarItem, type NavbarProps, type NavigationItem, Notification, type NotificationAction, type NotificationPosition, PageHeading, type PageHeadingAction, type PageHeadingBreadcrumb, type PageHeadingMeta, type PageHeadingProps, Pagination, type Position, ProgressBar, type ProgressStep, RadioGroup, type RadioOption, SectionHeading, type SectionHeadingAction, type SectionHeadingProps, type SectionHeadingTab, Select, type SelectOption, type SelectableOption, SidebarNavigation, type SidebarNavigationItem, type SidebarNavigationSection, SignInForm, type SimpleSize, type Size, StackedList, type StackedListItem, type StatItem, Stats, type Status, type StatusColor, type StepItem, type TabItem, Table, type TableAction, type TableColumn$1 as TableColumn, Tabs, type TaskStatus, TextInput, Textarea, Toggle, VerticalNavigation, type VerticalNavigationGroup, type VerticalNavigationItem, cn, commandPaletteBadgeVariants, commandPaletteContainerVariants, commandPaletteDescriptionVariants, commandPaletteEmptyIconVariants, commandPaletteEmptyStateVariants, commandPaletteFooterVariants, commandPaletteGroupHeaderVariants, commandPaletteInputVariants, commandPaletteOptionVariants };

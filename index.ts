@@ -34,6 +34,7 @@ export * from './layout/media_objects'
 
 // Navigation
 export * from './navigation/breadcrumbs'
+export * from './navigation/command_palettes'
 export * from './navigation/pagination'
 export * from './navigation/tabs'
 export * from './navigation/navbars'
