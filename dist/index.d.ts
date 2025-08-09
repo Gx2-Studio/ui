@@ -47,7 +47,7 @@ interface DropdownItem$1 extends Omit<BaseAction, 'label'> {
     label: string;
     divider?: boolean;
 }
-interface BreadcrumbItem$1 {
+interface BreadcrumbItem {
     label: string;
     href?: string;
     current?: boolean;
@@ -554,7 +554,7 @@ interface PageHeadingAction extends ActionWithVariant {
     hideOnMobile?: boolean;
 }
 type PageHeadingMeta = MetaItem;
-type PageHeadingBreadcrumb = Omit<BreadcrumbItem$1, 'onClick'>;
+type PageHeadingBreadcrumb = Omit<BreadcrumbItem, 'onClick'>;
 declare const pageHeadingContainerVariants: (props?: ({
     variant?: "simple" | "with-actions" | "with-meta-and-actions" | "with-avatar-and-actions" | "with-logo-meta-and-actions" | "with-actions-and-breadcrumbs" | "with-meta-actions-and-breadcrumbs" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
@@ -696,12 +696,6 @@ interface MediaObjectProps extends BaseComponentProps, VariantProps<typeof media
 }
 declare const MediaObject: react.ForwardRefExoticComponent<MediaObjectProps & react.RefAttributes<HTMLDivElement>>;
 
-interface BreadcrumbItem {
-    name: string;
-    href?: string;
-    current?: boolean;
-    onClick?: () => void;
-}
 declare const breadcrumbsNavVariants: (props?: ({
     variant?: "simple" | "fullWidth" | "contained" | null | undefined;
 } & class_variance_authority_types.ClassProp) | undefined) => string;
@@ -1157,4 +1151,4 @@ declare const EmptyState: react.ForwardRefExoticComponent<EmptyStateProps & reac
 
 declare function cn(...inputs: ClassValue[]): string;
 
-export { ActionPanel, type ActionPanelAction, type ActionWithVariant, Alert, type Alignment, type Attachment, Avatar, AvatarGroup, type AvatarNotificationColor, type AvatarNotificationPosition, type AvatarProps$1 as AvatarProps, type AvatarShape, type AvatarSize, Badge, type BadgeColor, BadgeOnDark, type BadgeProps$1 as BadgeProps, type BadgeSize, type BadgeVariant, type BaseAction, type BaseColor, type BaseComponentProps, type BrandColor, type BreadcrumbItem$1 as BreadcrumbItem, Breadcrumbs, Button, ButtonGroup, ButtonOnDark, type ButtonProps$1 as ButtonProps, type ButtonRounded, type ButtonSize, type ButtonVariant, Calendar, type CalendarDay, type CalendarEvent, type CalendarProps, Card, CardBody, CardFooter, CardHeader, CardHeading, type CardHeadingAction, type CardHeadingDropdownItem, type CardHeadingMeta, type CardHeadingProps, Checkbox, CircularButton, type ColorVariant, ComboboxComponent as Combobox, type ComboboxOption, Container, DescriptionList, type DescriptionListItem, Divider, Drawer, type DrawerAction, Dropdown, type DropdownItem, EmptyState, type EmptyStateAction, Feed, type FeedItem, type FormField, type FormFieldProps, FormLayout, type FormSection, GridList, type GridListItem, Input, type InputProps, type LayoutVariant, ListContainer, type ListItemWithAvatar, MediaObject, type MetaItem, Modal, type ModalAction, NativeSelect, Navbar, type NavbarItem, type NavbarProps, type NavigationItem, Notification, type NotificationAction, type NotificationPosition, PageHeading, type PageHeadingAction, type PageHeadingBreadcrumb, type PageHeadingMeta, type PageHeadingProps, Pagination, type Position, ProgressBar, type ProgressStep, RadioGroup, type RadioOption, SectionHeading, type SectionHeadingAction, type SectionHeadingProps, type SectionHeadingTab, Select, type SelectOption, type SelectableOption, SidebarNavigation, type SidebarNavigationItem, type SidebarNavigationSection, SignInForm, type SimpleSize, type Size, StackedList, type StackedListItem, type StatItem, Stats, type Status, type StatusColor, type StepItem, type TabItem, Table, type TableAction, type TableColumn$1 as TableColumn, Tabs, type TaskStatus, TextInput, Textarea, Toggle, VerticalNavigation, type VerticalNavigationGroup, type VerticalNavigationItem, cn };
+export { ActionPanel, type ActionPanelAction, type ActionWithVariant, Alert, type Alignment, type Attachment, Avatar, AvatarGroup, type AvatarNotificationColor, type AvatarNotificationPosition, type AvatarProps$1 as AvatarProps, type AvatarShape, type AvatarSize, Badge, type BadgeColor, BadgeOnDark, type BadgeProps$1 as BadgeProps, type BadgeSize, type BadgeVariant, type BaseAction, type BaseColor, type BaseComponentProps, type BrandColor, type BreadcrumbItem, Breadcrumbs, Button, ButtonGroup, ButtonOnDark, type ButtonProps$1 as ButtonProps, type ButtonRounded, type ButtonSize, type ButtonVariant, Calendar, type CalendarDay, type CalendarEvent, type CalendarProps, Card, CardBody, CardFooter, CardHeader, CardHeading, type CardHeadingAction, type CardHeadingDropdownItem, type CardHeadingMeta, type CardHeadingProps, Checkbox, CircularButton, type ColorVariant, ComboboxComponent as Combobox, type ComboboxOption, Container, DescriptionList, type DescriptionListItem, Divider, Drawer, type DrawerAction, Dropdown, type DropdownItem, EmptyState, type EmptyStateAction, Feed, type FeedItem, type FormField, type FormFieldProps, FormLayout, type FormSection, GridList, type GridListItem, Input, type InputProps, type LayoutVariant, ListContainer, type ListItemWithAvatar, MediaObject, type MetaItem, Modal, type ModalAction, NativeSelect, Navbar, type NavbarItem, type NavbarProps, type NavigationItem, Notification, type NotificationAction, type NotificationPosition, PageHeading, type PageHeadingAction, type PageHeadingBreadcrumb, type PageHeadingMeta, type PageHeadingProps, Pagination, type Position, ProgressBar, type ProgressStep, RadioGroup, type RadioOption, SectionHeading, type SectionHeadingAction, type SectionHeadingProps, type SectionHeadingTab, Select, type SelectOption, type SelectableOption, SidebarNavigation, type SidebarNavigationItem, type SidebarNavigationSection, SignInForm, type SimpleSize, type Size, StackedList, type StackedListItem, type StatItem, Stats, type Status, type StatusColor, type StepItem, type TabItem, Table, type TableAction, type TableColumn$1 as TableColumn, Tabs, type TaskStatus, TextInput, Textarea, Toggle, VerticalNavigation, type VerticalNavigationGroup, type VerticalNavigationItem, cn };

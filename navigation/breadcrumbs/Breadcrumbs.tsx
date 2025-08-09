@@ -1,15 +1,9 @@
 import { forwardRef } from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '../../utils/cn'
-import { BaseComponentProps } from '../../utils/types'
+import { BaseComponentProps, BreadcrumbItem } from '../../utils/types'
 import { ChevronRightIcon, HomeIcon } from '@heroicons/react/20/solid'
 
-export interface BreadcrumbItem {
-  name: string
-  href?: string
-  current?: boolean
-  onClick?: () => void
-}
 
 const breadcrumbsNavVariants = cva(
   'flex',
@@ -177,7 +171,7 @@ export const Breadcrumbs = forwardRef<HTMLElement, BreadcrumbsProps>(
           )}
           
           {items.map((item, index) => (
-            <li key={item.name} className="flex">
+            <li key={item.label} className="flex">
               <div className="flex items-center">
                 {getSeparatorComponent()}
                 {item.href || item.onClick ? (
@@ -191,7 +185,7 @@ export const Breadcrumbs = forwardRef<HTMLElement, BreadcrumbsProps>(
                       isClickable: Boolean(item.href || item.onClick)
                     })}
                   >
-                    {item.name}
+                    {item.label}
                   </a>
                 ) : (
                   <span
@@ -202,7 +196,7 @@ export const Breadcrumbs = forwardRef<HTMLElement, BreadcrumbsProps>(
                       isClickable: false
                     })}
                   >
-                    {item.name}
+                    {item.label}
                   </span>
                 )}
               </div>
