@@ -58,10 +58,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/tailwind-components"
+    "url": "https://github.com/Gx2-Studio/ui"
   },
   "bugs": {
-    "url": "https://github.com/your-org/tailwind-components/issues"
+    "url": "https://github.com/Gx2-Studio/ui/issues"
   },
-  "homepage": "https://github.com/your-org/tailwind-components#readme"
+  "homepage": "https://github.com/Gx2-Studio/ui"
 }
