@@ -14,6 +14,15 @@ const config: StorybookConfig = {
     "name": "@storybook/react-vite",
     "options": {}
   },
-  "docs": {}
+  "docs": {},
+  "staticDirs": ["../public"],
+  "viteFinal": async (config) => {
+    // Configure base path for GitHub Pages deployment
+    // This will be /ui/ when deployed to GitHub Pages
+    if (process.env.NODE_ENV === 'production') {
+      config.base = '/ui/';
+    }
+    return config;
+  }
 };
 export default config;
