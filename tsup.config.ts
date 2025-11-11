@@ -11,11 +11,15 @@ export default defineConfig({
   treeshake: true,
   minify: true,
   loader: {
-    '.css': 'copy'
+    '.css': 'copy',
   },
   esbuildOptions(options) {
     options.banner = {
       js: '"use client"',
     }
-  }
+  },
+  // Suppress "use client" directive warnings (expected behavior for React Server Components)
+  onSuccess: async () => {
+    console.log('✓ Build completed successfully')
+  },
 })

@@ -1,0 +1,261 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Getting Started" />
+
+# Getting Started
+
+This guide will help you set up and start using @gx2-studio/ui in your project.
+
+## Installation
+
+### 1. Install the Package
+
+```bash
+npm install @gx2-studio/ui
+```
+
+### 2. Install Peer Dependencies
+
+```bash
+npm install react react-dom
+```
+
+### 3. Install Tailwind CSS Plugins
+
+Our components require specific Tailwind CSS plugins:
+
+```bash
+npm install -D @tailwindcss/forms @tailwindcss/typography @tailwindcss/aspect-ratio
+```
+
+## Configuration
+
+### Tailwind CSS Setup
+
+Add the package path to your `tailwind.config.js` content array so Tailwind can properly scan and include the component styles:
+
+```js
+// tailwind.config.js
+module.exports = {
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}', // Your app files
+    './node_modules/@gx2-studio/ui/**/*.{js,ts,jsx,tsx}', // Component library
+  ],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+}
+```
+
+### Import Styles
+
+If the library includes a CSS file, import it in your app entry point:
+
+```tsx
+// main.tsx or App.tsx
+import '@gx2-studio/ui/css'
+```
+
+## Basic Usage
+
+### Importing Components
+
+You can import components individually (recommended for tree-shaking):
+
+```tsx
+import { Button, Input, Modal } from '@gx2-studio/ui'
+```
+
+### Using a Component
+
+Here's a simple example using the Button component:
+
+```tsx
+import { Button } from '@gx2-studio/ui'
+
+function App() {
+  return (
+    <Button
+      variant="primary"
+      size="md"
+      onClick={() => console.log('Clicked!')}
+    >
+      Click Me
+    </Button>
+  )
+}
+```
+
+### Component with Props
+
+Most components accept standard HTML attributes plus custom props:
+
+```tsx
+import { Input } from '@gx2-studio/ui'
+
+function LoginForm() {
+  return (
+    <Input
+      label="Email"
+      type="email"
+      placeholder="you@example.com"
+      helpText="We'll never share your email"
+      required
+    />
+  )
+}
+```
+
+## Common Patterns
+
+### Form with Validation
+
+```tsx
+import { Input, Button, Alert } from '@gx2-studio/ui'
+import { useState } from 'react'
+
+function ContactForm() {
+  const [email, setEmail] = useState('')
+  const [error, setError] = useState('')
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email.includes('@')) {
+      setError('Please enter a valid email')
+      return
+    }
+    // Submit form...
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <Input
+        label="Email"
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        error={error}
+      />
+
+      {error && (
+        <Alert variant="error" title="Validation Error">
+          {error}
+        </Alert>
+      )}
+
+      <Button type="submit" variant="primary">
+        Submit
+      </Button>
+    </form>
+  )
+}
+```
+
+### Modal Dialog
+
+```tsx
+import { Modal, Button } from '@gx2-studio/ui'
+import { useState } from 'react'
+
+function MyComponent() {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>
+        Open Modal
+      </Button>
+
+      <Modal
+        open={open}
+        onClose={() => setOpen(false)}
+        title="Confirm Action"
+        description="Are you sure you want to proceed?"
+        actions={[
+          {
+            label: 'Cancel',
+            variant: 'secondary',
+            onClick: () => setOpen(false),
+          },
+          {
+            label: 'Confirm',
+            variant: 'primary',
+            onClick: () => {
+              // Handle confirmation
+              setOpen(false)
+            },
+          },
+        ]}
+      />
+    </>
+  )
+}
+```
+
+## TypeScript Support
+
+All components are fully typed. You can import types for props:
+
+```tsx
+import { Button, type ButtonProps } from '@gx2-studio/ui'
+
+// Extend component props
+interface MyButtonProps extends ButtonProps {
+  customProp?: string
+}
+
+const MyButton = ({ customProp, ...props }: MyButtonProps) => {
+  return <Button {...props} />
+}
+```
+
+## Styling and Customization
+
+### Using className
+
+All components accept a `className` prop for custom styles:
+
+```tsx
+<Button
+  variant="primary"
+  className="hover:scale-105 transition-transform"
+>
+  Hover me
+</Button>
+```
+
+### Using Variants
+
+Components use CVA (Class Variance Authority) for powerful variant support:
+
+```tsx
+<Button
+  variant="primary"  // 'primary' | 'secondary' | 'soft' | 'ghost'
+  size="md"         // 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  rounded="md"      // 'sm' | 'md' | 'lg' | 'full'
+>
+  Click me
+</Button>
+```
+
+## Next Steps
+
+- Browse the **Components** section in the sidebar to explore all available components
+- Check the **Controls** panel in each story to experiment with props
+- Review the **Docs** tab for detailed prop tables and examples
+- Read component-specific accessibility notes
+
+## Need Help?
+
+- [GitHub Issues](https://github.com/Gx2-Studio/ui/issues) - Report bugs or request features
+- [GitHub Discussions](https://github.com/Gx2-Studio/ui/discussions) - Ask questions and share ideas
+
+## What's Next?
+
+Start exploring components in the sidebar, beginning with commonly used ones like:
+- **Components > Inputs > Button** - Learn about button variants
+- **Components > Inputs > Input** - Form inputs with validation
+- **Components > Overlays > Modal** - Dialog modals
+- **Components > Feedback > Alert** - User feedback alerts
