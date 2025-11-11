@@ -86,7 +86,7 @@ export interface BreadcrumbItem {
 
 // Metadata display
 export interface MetaItem {
-  label: string
+  label?: string
   value: string
   icon?: React.ComponentType<{ className?: string }>
 }

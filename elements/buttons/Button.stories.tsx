@@ -3,12 +3,72 @@ import { Button } from './Button'
 import { EnvelopeIcon, PlusIcon } from '@heroicons/react/20/solid'
 
 const meta: Meta<typeof Button> = {
-  title: 'Elements/Button',
+  title: '1. Core/Button',
   component: Button,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['primary', 'secondary', 'soft', 'ghost'],
+      description: 'Button style variant',
+      table: {
+        defaultValue: { summary: 'primary' },
+        type: { summary: "'primary' | 'secondary' | 'soft' | 'ghost'" }
+      }
+    },
+    size: {
+      control: 'select',
+      options: ['xs', 'sm', 'md', 'lg', 'xl'],
+      description: 'Button size',
+      table: {
+        defaultValue: { summary: 'md' },
+        type: { summary: "'xs' | 'sm' | 'md' | 'lg' | 'xl'" }
+      }
+    },
+    rounded: {
+      control: 'select',
+      options: ['sm', 'md', 'lg', 'full'],
+      description: 'Border radius size',
+      table: {
+        defaultValue: { summary: 'md' },
+        type: { summary: "'sm' | 'md' | 'lg' | 'full'" }
+      }
+    },
+    children: {
+      control: 'text',
+      description: 'Button text content'
+    },
+    disabled: {
+      control: 'boolean',
+      description: 'Disable button interaction',
+      table: {
+        defaultValue: { summary: 'false' }
+      }
+    },
+    leadingIcon: {
+      control: false,
+      description: 'Icon element displayed before button text'
+    },
+    trailingIcon: {
+      control: false,
+      description: 'Icon element displayed after button text'
+    },
+    type: {
+      control: 'select',
+      options: ['button', 'submit', 'reset'],
+      description: 'HTML button type attribute',
+      table: {
+        defaultValue: { summary: 'button' }
+      }
+    },
+    onClick: {
+      action: 'clicked',
+      description: 'Click event handler'
+    }
+  }
 }
 
 export default meta

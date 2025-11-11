@@ -3,7 +3,7 @@ import { Input } from './Input'
 import { EnvelopeIcon, CurrencyDollarIcon, UserIcon } from '@heroicons/react/20/solid'
 
 const meta: Meta<typeof Input> = {
-  title: 'Forms/Input',
+  title: '2. Forms/Input',
   component: Input,
   parameters: {
     layout: 'padded',

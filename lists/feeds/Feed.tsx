@@ -22,7 +22,7 @@ export interface FeedItem {
   tags?: string[]
   comments?: Array<{
     id: string
-    user: { name: string; avatar?: string }
+    user: { name: string; avatar?: string; initials?: string }
     content: string
     timestamp: string
   }>

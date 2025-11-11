@@ -3,7 +3,7 @@ import { VerticalNavigation, VerticalNavigationGroup } from './VerticalNavigatio
 import { HomeIcon, UserGroupIcon, FolderIcon, CalendarIcon, DocumentIcon, ChartBarIcon } from '@heroicons/react/24/outline'
 
 const meta: Meta<typeof VerticalNavigation> = {
-  title: 'Navigation/VerticalNavigation',
+  title: '4. Navigation/VerticalNavigation',
   component: VerticalNavigation,
   parameters: {
     layout: 'padded',

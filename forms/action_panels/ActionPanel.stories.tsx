@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { ActionPanel } from './ActionPanel'
 
 const meta: Meta<typeof ActionPanel> = {
-  title: 'Forms/ActionPanel',
+  title: '2. Forms/ActionPanel',
   component: ActionPanel,
   parameters: {
     layout: 'padded',

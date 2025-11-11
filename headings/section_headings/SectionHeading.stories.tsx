@@ -3,7 +3,7 @@ import { SectionHeading } from './SectionHeading'
 import { PlusIcon } from '@heroicons/react/20/solid'
 
 const meta: Meta<typeof SectionHeading> = {
-  title: 'Headings/SectionHeading',
+  title: '8. Typography/SectionHeading',
   component: SectionHeading,
   parameters: {
     layout: 'padded',

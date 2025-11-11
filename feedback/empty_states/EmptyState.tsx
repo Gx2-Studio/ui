@@ -5,7 +5,7 @@ import { BaseComponentProps } from '../../utils/types'
 import { Button } from '../../elements/buttons'
 
 export interface EmptyStateAction {
-  label: string
+  label?: string
   onClick?: () => void
   href?: string
   variant?: 'primary' | 'secondary'

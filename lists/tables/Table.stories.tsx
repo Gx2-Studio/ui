@@ -3,7 +3,7 @@ import { Table, TableColumn } from './Table'
 import { useState } from 'react'
 
 const meta: Meta<typeof Table> = {
-  title: 'Lists/Table',
+  title: '5. Data Display/Table',
   component: Table,
   parameters: {
     layout: 'padded',

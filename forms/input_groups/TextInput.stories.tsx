@@ -3,7 +3,7 @@ import { TextInput } from './TextInput'
 import { EnvelopeIcon, MagnifyingGlassIcon, QuestionMarkCircleIcon } from '@heroicons/react/20/solid'
 
 const meta: Meta<typeof TextInput> = {
-  title: 'Forms/TextInput',
+  title: '2. Forms/TextInput',
   component: TextInput,
   parameters: {
     layout: 'padded',

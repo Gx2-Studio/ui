@@ -4,7 +4,7 @@ import { HomeIcon, UserGroupIcon, FolderIcon, CalendarIcon, DocumentIcon, ChartB
 import { useState } from 'react'
 
 const meta: Meta<typeof SidebarNavigation> = {
-  title: 'Navigation/SidebarNavigation',
+  title: '4. Navigation/SidebarNavigation',
   component: SidebarNavigation,
   parameters: {
     layout: 'fullscreen',

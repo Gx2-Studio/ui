@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
+import { useState } from 'react'
 import { Textarea } from './Textarea'
 
 const meta: Meta<typeof Textarea> = {
-  title: 'Forms/Textarea',
+  title: '2. Forms/Textarea',
   component: Textarea,
   parameters: {
     layout: 'padded',
@@ -265,7 +266,7 @@ export const CommentBox: Story = {
 export const CharacterCounter: Story = {
   render: () => {
     const maxChars = 500
-    const [value, setValue] = React.useState('')
+    const [value, setValue] = useState('')
 
     return (
       <div className="max-w-lg">

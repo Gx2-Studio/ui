@@ -3,7 +3,7 @@ import { Divider } from './Divider'
 import { PlusIcon, StarIcon } from '@heroicons/react/20/solid'
 
 const meta: Meta<typeof Divider> = {
-  title: 'Layout/Divider',
+  title: '3. Layout/Divider',
   component: Divider,
   parameters: {
     layout: 'padded',

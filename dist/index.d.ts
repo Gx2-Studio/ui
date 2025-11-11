@@ -54,7 +54,7 @@ interface BreadcrumbItem {
     onClick?: () => void;
 }
 interface MetaItem {
-    label: string;
+    label?: string;
     value: string;
     icon?: React.ComponentType<{
         className?: string;
@@ -338,6 +338,7 @@ declare const toggleSwitchVariants: (props?: ({
 } & class_variance_authority_types.ClassProp) | undefined) => string;
 interface ToggleProps extends VariantProps<typeof toggleSwitchVariants> {
     checked?: boolean;
+    defaultChecked?: boolean;
     onChange?: (checked: boolean) => void;
     label?: string;
     description?: string;
@@ -1055,6 +1056,7 @@ interface FeedItem {
         user: {
             name: string;
             avatar?: string;
+            initials?: string;
         };
         content: string;
         timestamp: string;
@@ -1189,7 +1191,7 @@ interface AlertProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<
 declare const Alert: react.ForwardRefExoticComponent<AlertProps & react.RefAttributes<HTMLDivElement>>;
 
 interface EmptyStateAction {
-    label: string;
+    label?: string;
     onClick?: () => void;
     href?: string;
     variant?: 'primary' | 'secondary';

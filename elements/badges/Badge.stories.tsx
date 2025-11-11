@@ -2,12 +2,63 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Badge } from './Badge'
 
 const meta: Meta<typeof Badge> = {
-  title: 'Elements/Badge',
+  title: '1. Core/Badge',
   component: Badge,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['flat', 'pill', 'outline'],
+      description: 'Badge style variant',
+      table: {
+        defaultValue: { summary: 'flat' },
+        type: { summary: "'flat' | 'pill' | 'outline'" }
+      }
+    },
+    color: {
+      control: 'select',
+      options: ['gray', 'red', 'yellow', 'green', 'blue', 'indigo', 'purple', 'pink'],
+      description: 'Badge color scheme',
+      table: {
+        defaultValue: { summary: 'gray' },
+        type: { summary: "'gray' | 'red' | 'yellow' | 'green' | 'blue' | 'indigo' | 'purple' | 'pink'" }
+      }
+    },
+    size: {
+      control: 'select',
+      options: ['xs', 'sm', 'md'],
+      description: 'Badge size',
+      table: {
+        defaultValue: { summary: 'xs' },
+        type: { summary: "'xs' | 'sm' | 'md'" }
+      }
+    },
+    dot: {
+      control: 'boolean',
+      description: 'Show status dot before text',
+      table: {
+        defaultValue: { summary: 'false' }
+      }
+    },
+    removable: {
+      control: 'boolean',
+      description: 'Show remove/close button',
+      table: {
+        defaultValue: { summary: 'false' }
+      }
+    },
+    children: {
+      control: 'text',
+      description: 'Badge text content'
+    },
+    onRemove: {
+      action: 'removed',
+      description: 'Function called when remove button is clicked'
+    }
+  }
 }
 
 export default meta

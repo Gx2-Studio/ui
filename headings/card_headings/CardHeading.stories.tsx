@@ -3,7 +3,7 @@ import { CardHeading } from './CardHeading'
 import { PlusIcon, PencilIcon, TrashIcon, ShareIcon } from '@heroicons/react/20/solid'
 
 const meta: Meta<typeof CardHeading> = {
-  title: 'Headings/CardHeading',
+  title: '8. Typography/CardHeading',
   component: CardHeading,
   parameters: {
     layout: 'padded',

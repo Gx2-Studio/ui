@@ -11,7 +11,7 @@ import {
 } from '@heroicons/react/24/outline'
 
 const meta: Meta<typeof CommandPalette> = {
-  title: 'Navigation/CommandPalette',
+  title: '4. Navigation/CommandPalette',
   component: CommandPalette,
   parameters: {
     layout: 'centered',

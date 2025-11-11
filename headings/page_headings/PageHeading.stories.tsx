@@ -11,7 +11,7 @@ import {
 } from '@heroicons/react/20/solid'
 
 const meta: Meta<typeof PageHeading> = {
-  title: 'Headings/PageHeading',
+  title: '8. Typography/PageHeading',
   component: PageHeading,
   parameters: {
     layout: 'padded',

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Select, SelectOption, NativeSelect } from './Select'
 
 const meta: Meta<typeof Select> = {
-  title: 'Forms/Select',
+  title: '2. Forms/Select',
   component: Select,
   parameters: {
     layout: 'padded',

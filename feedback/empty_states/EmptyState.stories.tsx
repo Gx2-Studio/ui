@@ -3,7 +3,7 @@ import { EmptyState } from './EmptyState'
 import { FolderIcon, PlusIcon, DocumentIcon } from '@heroicons/react/24/outline'
 
 const meta: Meta<typeof EmptyState> = {
-  title: 'Feedback/EmptyState',
+  title: '6. Feedback/EmptyState',
   component: EmptyState,
   parameters: {
     layout: 'padded',
