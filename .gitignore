@@ -1,5 +1,29 @@
 node_modules
+dist
+coverage
+*.log
 
 # Storybook
 stories/
 storybook-static/
+
+# Testing
+.nyc_output
+playwright-report
+test-results
+
+# Build
+*.tsbuildinfo
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Env
+.env
+.env.local
+.env.*.local
