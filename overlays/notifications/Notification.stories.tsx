@@ -5,7 +5,7 @@ import { Button } from '../../elements/buttons/Button'
 import { UserCircleIcon, BellIcon, CogIcon } from '@heroicons/react/24/outline'
 
 const meta: Meta<typeof Notification> = {
-  title: 'Overlays/Notification',
+  title: '7. Overlays/Notification',
   component: Notification,
   parameters: {
     layout: 'fullscreen',

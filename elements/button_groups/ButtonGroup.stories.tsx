@@ -3,7 +3,7 @@ import { ButtonGroup } from './ButtonGroup'
 import { Button } from '../buttons/Button'
 
 const meta: Meta<typeof ButtonGroup> = {
-  title: 'Elements/ButtonGroup',
+  title: '1. Core/ButtonGroup',
   component: ButtonGroup,
   parameters: {
     layout: 'centered',

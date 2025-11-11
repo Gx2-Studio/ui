@@ -5,7 +5,7 @@ import { CardHeader } from './CardHeader'
 import { CardBody } from './CardBody'
 
 const meta: Meta<typeof CardFooter> = {
-  title: 'Layout/CardFooter',
+  title: '3. Layout/CardFooter',
   component: CardFooter,
   parameters: {
     layout: 'padded',

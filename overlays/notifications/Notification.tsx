@@ -1,5 +1,3 @@
-'use client'
-
 import { forwardRef, useEffect } from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { Transition } from '@headlessui/react'

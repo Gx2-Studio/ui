@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { GridList, GridListItem } from './GridList'
 
 const meta: Meta<typeof GridList> = {
-  title: 'Lists/GridList',
+  title: '5. Data Display/GridList',
   component: GridList,
   parameters: {
     layout: 'padded',

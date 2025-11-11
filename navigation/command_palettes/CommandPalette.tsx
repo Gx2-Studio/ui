@@ -1,5 +1,3 @@
-'use client'
-
 import { forwardRef, Fragment, useState } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel, Combobox, ComboboxInput, ComboboxOption, ComboboxOptions } from '@headlessui/react'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'

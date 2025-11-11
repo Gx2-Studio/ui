@@ -4,7 +4,7 @@ import { Toggle } from './Toggle'
 import { CheckIcon, XMarkIcon } from '@heroicons/react/20/solid'
 
 const meta: Meta<typeof Toggle> = {
-  title: 'Forms/Toggle',
+  title: '2. Forms/Toggle',
   component: Toggle,
   parameters: {
     layout: 'padded',

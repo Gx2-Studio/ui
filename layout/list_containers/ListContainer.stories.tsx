@@ -3,7 +3,7 @@ import { ListContainer } from './ListContainer'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 
 const meta: Meta<typeof ListContainer> = {
-  title: 'Layout/ListContainer',
+  title: '3. Layout/ListContainer',
   component: ListContainer,
   parameters: {
     layout: 'padded',

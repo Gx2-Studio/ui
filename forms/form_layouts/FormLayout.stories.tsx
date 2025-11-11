@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { FormLayout, FormSection } from './FormLayout'
 
 const meta: Meta<typeof FormLayout> = {
-  title: 'Forms/FormLayout',
+  title: '2. Forms/FormLayout',
   component: FormLayout,
   parameters: {
     layout: 'padded',
