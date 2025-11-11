@@ -3,7 +3,7 @@ import { MediaObject } from './MediaObject'
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/20/solid'
 
 const meta: Meta<typeof MediaObject> = {
-  title: 'Layout/MediaObject',
+  title: '3. Layout/MediaObject',
   component: MediaObject,
   parameters: {
     layout: 'padded',

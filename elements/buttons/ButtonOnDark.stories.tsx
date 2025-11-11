@@ -3,7 +3,7 @@ import { ButtonOnDark } from './ButtonOnDark'
 import { EnvelopeIcon, PlusIcon } from '@heroicons/react/20/solid'
 
 const meta: Meta<typeof ButtonOnDark> = {
-  title: 'Elements/ButtonOnDark',
+  title: '1. Core/ButtonOnDark',
   component: ButtonOnDark,
   parameters: {
     layout: 'centered',

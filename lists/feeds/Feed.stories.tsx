@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Feed, FeedItem } from './Feed'
 
 const meta: Meta<typeof Feed> = {
-  title: 'Lists/Feed',
+  title: '5. Data Display/Feed',
   component: Feed,
   parameters: {
     layout: 'padded',

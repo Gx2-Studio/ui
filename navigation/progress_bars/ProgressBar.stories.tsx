@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { ProgressBar, ProgressStep } from './ProgressBar'
 
 const meta: Meta<typeof ProgressBar> = {
-  title: 'Navigation/ProgressBar',
+  title: '4. Navigation/ProgressBar',
   component: ProgressBar,
   parameters: {
     layout: 'padded',

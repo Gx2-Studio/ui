@@ -11,7 +11,7 @@ import {
 } from '@heroicons/react/24/outline'
 
 const meta: Meta<typeof Modal> = {
-  title: 'Overlays/Modal',
+  title: '7. Overlays/Modal',
   component: Modal,
   parameters: {
     layout: 'fullscreen',

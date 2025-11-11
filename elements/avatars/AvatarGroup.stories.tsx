@@ -3,7 +3,7 @@ import { AvatarGroup } from './AvatarGroup'
 import { Avatar } from './Avatar'
 
 const meta: Meta<typeof AvatarGroup> = {
-  title: 'Elements/AvatarGroup',
+  title: '1. Core/AvatarGroup',
   component: AvatarGroup,
   parameters: {
     layout: 'centered',

@@ -4,7 +4,7 @@ import { Drawer } from './Drawer'
 import { Button } from '../../elements/buttons/Button'
 
 const meta: Meta<typeof Drawer> = {
-  title: 'Overlays/Drawer',
+  title: '7. Overlays/Drawer',
   component: Drawer,
   parameters: {
     layout: 'fullscreen',

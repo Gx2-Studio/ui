@@ -3,7 +3,7 @@ import { Breadcrumbs } from './Breadcrumbs'
 import { BreadcrumbItem } from '../../utils/types'
 
 const meta: Meta<typeof Breadcrumbs> = {
-  title: 'Navigation/Breadcrumbs',
+  title: '4. Navigation/Breadcrumbs',
   component: Breadcrumbs,
   parameters: {
     layout: 'padded',

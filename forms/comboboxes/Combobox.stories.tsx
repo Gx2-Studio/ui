@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { ComboboxComponent, ComboboxOption } from './Combobox'
 
 const meta: Meta<typeof ComboboxComponent> = {
-  title: 'Forms/Combobox',
+  title: '2. Forms/Combobox',
   component: ComboboxComponent,
   parameters: {
     layout: 'padded',

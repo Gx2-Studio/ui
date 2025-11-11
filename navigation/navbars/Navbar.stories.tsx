@@ -3,7 +3,7 @@ import { Navbar, NavbarItem } from './Navbar'
 import { BellIcon, PlusIcon } from '@heroicons/react/24/outline'
 
 const meta: Meta<typeof Navbar> = {
-  title: 'Navigation/Navbar',
+  title: '4. Navigation/Navbar',
   component: Navbar,
   parameters: {
     layout: 'fullscreen',
