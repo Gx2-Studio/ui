@@ -4,7 +4,7 @@ import { HomeIcon, UserGroupIcon, FolderIcon } from '@heroicons/react/24/outline
 import { useState } from 'react'
 
 const meta: Meta<typeof Tabs> = {
-  title: 'Navigation/Tabs',
+  title: '4. Navigation/Tabs',
   component: Tabs,
   parameters: {
     layout: 'padded',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { StackedList, StackedListItem } from './StackedList'
 
 const meta: Meta<typeof StackedList> = {
-  title: 'Lists/StackedList',
+  title: '5. Data Display/StackedList',
   component: StackedList,
   parameters: {
     layout: 'padded',

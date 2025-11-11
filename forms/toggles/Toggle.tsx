@@ -77,6 +77,7 @@ const toggleIconVariants = cva(
 
 interface ToggleProps extends VariantProps<typeof toggleSwitchVariants> {
   checked?: boolean
+  defaultChecked?: boolean
   onChange?: (checked: boolean) => void
   label?: string
   description?: string
@@ -86,8 +87,9 @@ interface ToggleProps extends VariantProps<typeof toggleSwitchVariants> {
 }
 
 export const Toggle = forwardRef<HTMLButtonElement, ToggleProps>(
-  ({ 
+  ({
     checked: controlledChecked,
+    defaultChecked = false,
     onChange,
     disabled = false,
     label,
@@ -98,7 +100,7 @@ export const Toggle = forwardRef<HTMLButtonElement, ToggleProps>(
     icon,
     ...props
   }, ref) => {
-    const [uncontrolledChecked, setUncontrolledChecked] = useState(false)
+    const [uncontrolledChecked, setUncontrolledChecked] = useState(defaultChecked)
     const isControlled = controlledChecked !== undefined
     const checked = isControlled ? controlledChecked : uncontrolledChecked
     

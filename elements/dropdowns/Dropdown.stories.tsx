@@ -4,7 +4,7 @@ import { Button } from '../buttons/Button'
 import { ChevronDownIcon, UserCircleIcon, Cog6ToothIcon, ArrowRightOnRectangleIcon } from '@heroicons/react/20/solid'
 
 const meta: Meta<typeof Dropdown> = {
-  title: 'Elements/Dropdown',
+  title: '1. Core/Dropdown',
   component: Dropdown,
   parameters: {
     layout: 'centered',

@@ -1,5 +1,3 @@
-'use client'
-
 import { forwardRef, useState } from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { Combobox, ComboboxButton, ComboboxInput, ComboboxOption, ComboboxOptions, Label } from '@headlessui/react'

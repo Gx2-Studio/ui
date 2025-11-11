@@ -2,12 +2,78 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Avatar } from './Avatar'
 
 const meta: Meta<typeof Avatar> = {
-  title: 'Elements/Avatar',
+  title: '1. Core/Avatar',
   component: Avatar,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  argTypes: {
+    src: {
+      control: 'text',
+      description: 'Image URL for the avatar'
+    },
+    alt: {
+      control: 'text',
+      description: 'Alt text for the avatar image'
+    },
+    initials: {
+      control: 'text',
+      description: 'Initials to display when no image is provided'
+    },
+    size: {
+      control: 'select',
+      options: ['xs', 'sm', 'md', 'lg', 'xl'],
+      description: 'Avatar size',
+      table: {
+        defaultValue: { summary: 'md' },
+        type: { summary: "'xs' | 'sm' | 'md' | 'lg' | 'xl'" }
+      }
+    },
+    shape: {
+      control: 'select',
+      options: ['circle', 'rounded'],
+      description: 'Avatar shape',
+      table: {
+        defaultValue: { summary: 'circle' },
+        type: { summary: "'circle' | 'rounded'" }
+      }
+    },
+    status: {
+      control: 'select',
+      options: [undefined, 'online', 'offline', 'away', 'busy'],
+      description: 'User status indicator',
+      table: {
+        type: { summary: "'online' | 'offline' | 'away' | 'busy' | undefined" }
+      }
+    },
+    statusPosition: {
+      control: 'select',
+      options: ['top', 'bottom'],
+      description: 'Position of status indicator',
+      table: {
+        defaultValue: { summary: 'bottom' },
+        type: { summary: "'top' | 'bottom'" }
+      }
+    },
+    notification: {
+      control: 'select',
+      options: [undefined, 'top', 'bottom', 'top-right', 'bottom-right'],
+      description: 'Notification badge position',
+      table: {
+        type: { summary: "'top' | 'bottom' | 'top-right' | 'bottom-right' | undefined" }
+      }
+    },
+    notificationColor: {
+      control: 'select',
+      options: ['gray', 'red', 'green', 'blue', 'yellow'],
+      description: 'Notification badge color',
+      table: {
+        defaultValue: { summary: 'gray' },
+        type: { summary: "'gray' | 'red' | 'green' | 'blue' | 'yellow'" }
+      }
+    }
+  }
 }
 
 export default meta

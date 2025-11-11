@@ -3,7 +3,7 @@ import { CircularButton } from './CircularButton'
 import { PlusIcon, PencilIcon, TrashIcon, ArrowDownIcon } from '@heroicons/react/20/solid'
 
 const meta: Meta<typeof CircularButton> = {
-  title: 'Elements/CircularButton',
+  title: '1. Core/CircularButton',
   component: CircularButton,
   parameters: {
     layout: 'centered',
